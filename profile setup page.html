@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Setup</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            background-image: url(https://img.freepik.com/premium-photo/woman-practice-yoga-template-white-green-namaste-copy-space_759575-11182.jpg?w=1480);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            backdrop-filter: blur(1px);
+
+        }
+
+        /* .parent-Div{
+    background-color: #1b5fbd;
+    width: 100%;
+} */
+        .container {
+            /* background-color: #ffffff; */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #7fb69657,;
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            /* background-image: url(https://img.freepik.com/free-photo/bowl-herbal-salt-leaves-loofah-isolated-white-background_23-2147940059.jpg?t=st=1757390601~exp=1757394201~hmac=3ef8b0205e8b5594d067bf943b57853c5cf0034f2edd1f2e2f3cb88d1b584097&w=2000); */
+            margin-top: 50px;
+            backdrop-filter: blur(3px);
+            background-attachment: fixed;
+            transition: 0.8s;
+
+        }
+.container:hover{
+                box-shadow: 0 4px 15px #7fb69657,0 4px 15px #7fb69657,0 4px 15px #7fb69657,0 4px 15px #7fb69657,0 4px 15px #7fb69657,0 4px 15px #7fb69657,0 4px 15px #7fb69657,0 4px 15px #7fb69657 ;
+transition: 0.8s;
+}
+        h2 {
+            text-align: center;
+            color: #1d601f;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #94b58f;
+             transition: 0.8s;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 90%;
+            padding: 12px;
+            margin-bottom: 15px;
+            /* border: 1px solid #2b2a2a; */
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border 0.3s;
+            background-color: #7fb69657;
+            color: rgb(21, 21, 21);
+            transition: 0.8s;
+           outline: none;
+           border: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            
+            outline: none;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+label:hover{
+    
+    /* letter-spacing: 1px; */
+    transition: 0.8s;
+}
+input:hover{
+    /* box-shadow: 0px 0px 10px rgb(59, 83, 39),0px 0px 10px rgb(59, 83, 39),0px 0px 10px rgb(59, 83, 39),0px 0px 10px rgb(59, 83, 39),0px 0px 10px rgb(59, 83, 39) ;
+    transition: 0.8s; */
+}
+        .submit-btn {
+            background-color: #1d601f;
+            color: white;
+            font-weight: bold;
+            padding: 14px;
+            width: 25%;
+            text-align: center;
+           margin-left: 30%;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #2f8133;
+        }
+
+        @media (max-width: 600px) {
+            .radio-group {
+                flex-direction: column;
+            }
+            .container{
+                padding: 0;
+                background-color: white;
+                /* margin: 20px; */
+            }
+            input{
+                height:20px ;
+            }
+            body{
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Parent-Div">
+        <div class="container">
+            <h2>User Profile Setup</h2>
+
+            <form>
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter full name">
+
+                <label for="email">Email / Phone</label>
+                <input type="text" id="email" name="email" placeholder="Enter email or phone number">
+
+                <label for="dob">Age / Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" name="height" placeholder="E.g., 170">
+
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" name="weight" placeholder="E.g., 65">
+
+                <label for="bmi">Body Mass Index (BMI)</label>
+                <input type="text" id="bmi" name="bmi" placeholder="BMI can be calculated">
+
+                <label for="activity-level">Activity Level</label>
+                <select id="activity-level" name="activity-level">
+                    <option value="Sedentary">Sedentary</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Active">Active</option>
+                </select>
+
+                <label for="medical-conditions">Known Medical Conditions</label>
+                <input type="text" id="medical-conditions" name="medical-conditions" placeholder="E.g., Diabetes">
+
+                <label for="allergies">Allergies</label>
+                <input type="text" id="allergies" name="allergies" placeholder="E.g., Pollen, Nuts">
+
+                <label for="fitness-goals">Fitness Goals</label>
+                <input type="text" id="fitness-goals" name="fitness-goals" placeholder="E.g., Build muscle">
+
+                <label>Fitness Goal Type</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="fitness-goal-type" value="Weight loss"> Weight loss</label>
+                    <label><input type="radio" name="fitness-goal-type" value="Muscle gain"> Muscle gain</label>
+                    <label><input type="radio" name="fitness-goal-type" value="General fitness"> General fitness</label>
+                    <label><input type="radio" name="fitness-goal-type" value="Mental wellness"> Mental wellness</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
